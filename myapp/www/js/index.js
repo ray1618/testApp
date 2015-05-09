@@ -165,25 +165,25 @@ function init() {
 
 function animate() {
     var xPos, yPos, zPos;
-    function accelerometerSuccess(acceleration){  
-            xPos = Math.round(acceleration.x);
-            yPos = Math.round(acceleration.y);
-            zPos = Math.round(acceleration.z);
-        /*
-            var dir = 'Acceleration X: ' + acceleration.x + '\n' +
-          'Acceleration Y: ' + acceleration.y + '\n' +
-          'Acceleration Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n';*/
-            //console.log(dir);
-//        mesh.rotation.x = xPos/10;
-        //mesh.rotation.x = 45*(Math.PI / 180);
-        //camera.rotation.x = (-yPos)/10;
-        //camera.rotation.x = xPosBtn;
-//        camera.rotation.x = -90 * Math.PI / 180 ;
-        zPos = (-zPos)*9;
-        camera.rotation.x = zPos * Math.PI / 180 ;
-        camera.rotation.y = xPosBtn;// zPos * Math.PI / 180 ;
-        $('#console').html('X:'+xPos+'<br>Y:'+yPos+'<br>Z:'+zPos);
+//    function accelerometerSuccess(acceleration){  
+//            xPos = Math.round(acceleration.x);
+//            yPos = Math.round(acceleration.y);
+//            zPos = Math.round(acceleration.z);
+//        /*
+//            var dir = 'Acceleration X: ' + acceleration.x + '\n' +
+//          'Acceleration Y: ' + acceleration.y + '\n' +
+//          'Acceleration Z: ' + acceleration.z + '\n' +
+//          'Timestamp: '      + acceleration.timestamp + '\n';*/
+//            //console.log(dir);
+////        mesh.rotation.x = xPos/10;
+//        //mesh.rotation.x = 45*(Math.PI / 180);
+//        //camera.rotation.x = (-yPos)/10;
+        camera.rotation.x = xPosBtn;
+////        camera.rotation.x = -90 * Math.PI / 180 ;
+//        zPos = (-zPos)*9;
+//        camera.rotation.x = zPos * Math.PI / 180 ;
+//        camera.rotation.y = xPosBtn;// zPos * Math.PI / 180 ;
+//        $('#console').html('X:'+xPos+'<br>Y:'+yPos+'<br>Z:'+zPos);
         
         requestAnimationFrame(animate);
         
@@ -198,13 +198,13 @@ function animate() {
         renderer.setViewport( 0.5 * window.innerWidth + 1, 0, 0.5 * window.innerWidth - 2, window.innerHeight - 2 );
         renderer.render( scene, camera2 );
        
-        }
+       // }
         
-        function accelerometerError(){
-            alert('error accelerator');
-        }
-        
-        var watchId = navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
+//        function accelerometerError(){
+//            alert('error accelerator');
+//        }
+//        
+//        var watchId = navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
     
      //var mh = Math.round(heading.magneticHeading);
