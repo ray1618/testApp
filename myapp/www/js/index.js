@@ -112,7 +112,7 @@ var geometry, material, mesh;
     
 
 init();
-//animate();
+animate();
 
 function init() {
 
