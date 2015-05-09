@@ -1,0 +1,3 @@
+<feature name="Accelerometer">
+    <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+</feature>
